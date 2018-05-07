@@ -18,6 +18,7 @@ import { SettingsPage } from 'pages/inside/settingsPage';
 import { SandboxPage } from 'pages/inside/sandboxPage';
 import { LoginPage } from 'pages/outside/loginPage';
 import { RegistrationPage } from 'pages/outside/registrationPage';
+import { SuitesPage } from 'pages/inside/suitesPage';
 import { LocalizationSwitcher } from 'components/main/localizationSwitcher';
 import { Notifications } from 'components/main/notification';
 import { authorizedRoute } from './authorizedRoute';
@@ -51,6 +52,7 @@ const AppRoute = authorizedRoute(() => (
       />
       <Route exact path="/:projectId/dashboard" component={DashboardPage} />
       <Route path="/:projectId/launches" component={LaunchesPage} />
+      <Route path="/:projectId/suites" component={SuitesPage} />
       <Route path="/:projectId/filters" component={FiltersPage} />
       <Route path="/:projectId/userdebug" component={DebugPage} />
       <Route path="/:projectId/members" component={MembersPage} />
