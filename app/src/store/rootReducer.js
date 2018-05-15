@@ -10,6 +10,7 @@ import { screenLockReducer } from 'controllers/screenLock';
 import { dashboardReducer } from 'controllers/dashboard';
 import { launchReducer } from 'controllers/launch';
 import { notificationReducer } from 'controllers/notification';
+import { suiteReducer } from 'controllers/suite/reducer';
 
 export const rootReducer = combineReducers({
   appInfo: appInfoReducer,
@@ -23,4 +24,5 @@ export const rootReducer = combineReducers({
   screenLock: screenLockReducer,
   dashboard: dashboardReducer,
   launches: launchReducer,
+  suites: suiteReducer,
 });
