@@ -18,7 +18,7 @@ import {
   selectSuitesAction,
 } from 'controllers/suite';
 import { currentLaunchSelector, fetchLaunchAction } from 'controllers/launch';
-import { Toolbar } from './toolbar';
+import { SuiteTestToolbar } from 'pages/inside/common/suiteTestToolbar';
 
 @connect(
   (state) => ({
@@ -81,7 +81,7 @@ export class SuitesPage extends Component {
     toggleSuiteSelectionAction: () => {},
     unselectAllSuitesAction: () => {},
     selectSuitesAction: () => {},
-    currentLaunch: {},
+    currentLaunch: null,
     fetchLaunchAction: () => {},
   };
 
@@ -122,11 +122,11 @@ export class SuitesPage extends Component {
     } = this.props;
     return (
       <PageLayout>
-        <Toolbar
+        <SuiteTestToolbar
           selectedItems={selectedSuites}
           onUnselect={this.props.toggleSuiteSelectionAction}
           onUnselectAll={this.props.unselectAllSuitesAction}
-          currentLaunch={currentLaunch}
+          parentItem={currentLaunch}
           onRefresh={this.handleRefresh}
         />
         <LaunchSuiteGrid

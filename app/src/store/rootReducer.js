@@ -12,6 +12,7 @@ import { launchReducer } from 'controllers/launch';
 import { notificationReducer } from 'controllers/notification';
 import { suiteReducer } from 'controllers/suite/reducer';
 import { filterReducer } from 'controllers/filter';
+import { testReducer } from 'controllers/test';
 
 export const rootReducer = combineReducers({
   appInfo: appInfoReducer,
@@ -27,4 +28,5 @@ export const rootReducer = combineReducers({
   launches: launchReducer,
   suites: suiteReducer,
   filters: filterReducer,
+  tests: testReducer,
 });
