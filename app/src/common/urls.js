@@ -22,7 +22,7 @@ export const URLS = {
   filter: (activeProject, id) => `${urlBase}${activeProject}/filter/${id}`,
   filters: (activeProject) => `${urlBase}${activeProject}/filter`,
 
-  launch: (activeProject) => `${urlBase}${activeProject}/launch`,
+  launch: (activeProject, id) => `${urlBase}${activeProject}/launch/${id}`,
   launchTagsSearch: (activeProject) => `${urlBase}${activeProject}/launch/tags?filter.cnt.tags=`,
   launches: (activeProject, ids) => `${urlBase}${activeProject}/launch${getQueryParams({ ids })}`,
   launchUpdate: (activeProject) => `${urlBase}${activeProject}/launch/update`,
@@ -42,6 +42,9 @@ export const URLS = {
   projectPreferences: (activeProject, userId) =>
     `${urlBase}project/${activeProject}/preference/${userId}`,
   projectUsers: (activeProject) => `${urlBase}project/${activeProject}/users`,
+
+  suites: (activeProject, launchId) =>
+    `${urlBase}${activeProject}/item${getQueryParams({ 'filter.eq.launch': launchId })}`,
 
   user: () => `${urlBase}user`,
   userRegistration: () => `${urlBase}user/registration`,
