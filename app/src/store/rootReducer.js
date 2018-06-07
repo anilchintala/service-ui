@@ -11,6 +11,7 @@ import { dashboardReducer } from 'controllers/dashboard';
 import { launchReducer } from 'controllers/launch';
 import { notificationReducer } from 'controllers/notification';
 import { suiteReducer } from 'controllers/suite/reducer';
+import { filterReducer } from 'controllers/filter';
 
 export const rootReducer = combineReducers({
   appInfo: appInfoReducer,
@@ -25,4 +26,5 @@ export const rootReducer = combineReducers({
   dashboard: dashboardReducer,
   launches: launchReducer,
   suites: suiteReducer,
+  filters: filterReducer,
 });
